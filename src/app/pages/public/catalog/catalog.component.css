@@ -1,0 +1,24 @@
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap:6px;
+    padding: 0;
+    margin-top: 20px;
+
+
+}
+
+button {
+    margin-left: 30px;
+    color: white;
+    background-color:#2b3343 ;
+    border-radius: 5px;
+    padding: 8px 14px;
+}
+
+button:hover {
+    background: #45ce61;
+    color: white;
+    border: none;
+}

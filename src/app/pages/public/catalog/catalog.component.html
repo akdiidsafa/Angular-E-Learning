@@ -1,1 +1,9 @@
-<p>catalog.component works!</p>
+<h1>Catalogue des Cours </h1>
+<ul>
+  @for( cour of cours(); track cour.id){
+    <li>
+      <span>{{cour.title}}</span>
+      <button [routerLink]= "['/courses',cour.description]">Details</button>
+    </li>
+  }
+</ul>
