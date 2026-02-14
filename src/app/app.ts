@@ -4,7 +4,7 @@ import { CatalogComponent } from './pages/public/catalog/catalog.component';
 
 @Component({
   selector: 'app-root',
-  imports: [CatalogComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
