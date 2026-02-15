@@ -1,32 +1,9 @@
- .home-container {
-      text-align: center;
-      margin-top: 100px;
-    }
-
-    h1 {
-      margin-bottom: 30px;
-    }
-
-    button {
-      padding: 10px 20px;
-      margin: 10px;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-      font-size: 16px;
-    }
-
-    .btn-primary {
-      background-color: #1976d2;
-      color: white;
-    }
-
-    .btn-success {
-      background-color: #2e7d32;
-      color: white;
-    }
-
-    .btn-danger {
-      background-color: #c62828;
-      color: white;
-    }
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}

@@ -1,7 +1,16 @@
 import { Routes } from '@angular/router';
+
+
 import { authGuard } from './core/guards/auth.guard';
 
+
 export const routes: Routes = [
+   {
+     path: 'student',
+     canActivate: [authGuard],
+     loadComponent: () =>
+      import('./pages/private/student/student-layout/student-layout.component')
+         .then(m => m.StudentLayoutComponent),}
 
 
   {
@@ -26,12 +35,23 @@ export const routes: Routes = [
   },
 
   {
+    path: '',
+    loadComponent: () =>
+      import('./pages/public/home/home.component').then(m => m.HomeComponent)
+  },
+
+  {
+    path: 'login',
+    loadComponent: () =>
+      import('./pages/public/login/login.component')
+        .then(m => m.LoginComponent)
+  },
+  {
     path: 'student',
     canActivate: [authGuard],
     loadComponent: () =>
       import('./pages/student/student-layout/student-layout.component')
         .then(m => m.StudentLayoutComponent),
-
     children: [
       {
         path: '',
@@ -41,7 +61,9 @@ export const routes: Routes = [
       {
         path: 'dashboard',
         loadComponent: () =>
-          import('./pages/student/dashboard/dashboard.component')
+
+          import('./pages/private/student/dashboard/dashboard.component')
+
             .then(m => m.DashboardComponent)
       },
       {
@@ -53,19 +75,25 @@ export const routes: Routes = [
       {
         path: 'settings',
         loadComponent: () =>
-          import('./pages/student/settings/settings.component')
+
+          import('./pages/private/student/settings/settings.component')
+
             .then(m => m.SettingsComponent)
       }
+   {
+         path: '',
+         loadComponent: () =>
+         import('./pages/public/home/home.component').then(m => m.HomeComponent)
+     }
     ]
   },
-
 
 
   {
     path: '**',
     loadComponent: () =>
       import('./pages/not-found/not-found.component')
+
         .then(m => m.NotFoundComponent)
   }
-
 ];
