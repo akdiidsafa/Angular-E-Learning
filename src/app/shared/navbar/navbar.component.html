@@ -1,5 +1,15 @@
-<nav>
-    <a routerLink="/">Accueil</a>
-    <a routerLink="/courses">Cours</a>
-    <a routerLink="/student/dashboard">Espace étudiant</a>
+
+<nav class="navbar">
+  <div class="nav-links">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      Accueil
+    </a>
+    <a routerLink="/courses" routerLinkActive="active">
+      Catalogue
+    </a>
+    <a routerLink="/student" routerLinkActive="active">
+      Espace Étudiant
+    </a>
+  </div>
+
 </nav>

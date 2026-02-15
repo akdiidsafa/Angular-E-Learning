@@ -10,5 +10,4 @@ import { RouterModule, RouterLink} from '@angular/router';
 })
 
 
-})
 export class NotFoundComponent {}

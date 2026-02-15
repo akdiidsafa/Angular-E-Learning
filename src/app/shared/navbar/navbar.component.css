@@ -1,22 +1,29 @@
-nav {
-    background: #111;
-    padding: 15px;
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
+
+.navbar {
+  background-color: #1a1a2e;
+  padding: 1rem 2rem;
 }
 
-nav a {
-    color: white;
-    margin-right: 15px;
-    text-decoration: none;
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-end;
 }
 
-nav a:hover {
-    text-decoration: underline;
-    cursor: pointer;
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
 }
 
-nav a.active {
-    color: #00bcd4;
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  
 }
+
+.nav-links a.active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
